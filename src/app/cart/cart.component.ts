@@ -10,7 +10,8 @@ import { CartService } from '../cart.service';
 })
 export class CartComponent  {
   items;
-
+  checkoutForm;
+  
   constructor(
     private cartService: CartService,
     private formBuilder: FormBuilder,
