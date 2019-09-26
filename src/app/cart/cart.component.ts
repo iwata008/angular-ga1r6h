@@ -11,11 +11,17 @@ import { CartService } from '../cart.service';
 export class CartComponent  {
   items;
   checkoutForm;
-  
+
   constructor(
     private cartService: CartService,
     private formBuilder: FormBuilder,
   ) {
+     this.items = this.cartService.getItems();
+
+    this.checkoutForm = this.formBuilder.group({
+      name: '',
+      address: ''
+    });
   }
 
   ngOnInit() {
